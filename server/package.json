@@ -17,5 +17,3 @@
    "sequelize": "^3.23.3"
  }
 }
-
-//this json works the same way as client/json, but runs on the server side
