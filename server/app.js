@@ -51,7 +51,7 @@ app.post('/api/user', function(req,res){
 });
 
 
-app.use(require('./middleware/headers.js'));
+app.use(require('./middleware/headers'));
 
 app.use('/api/test', function(req, res){
 	res.send("hello World");
