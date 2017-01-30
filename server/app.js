@@ -27,7 +27,7 @@ var User = sequelize.define('user',{
 
 
 User.sync();  
-//User.synod({force: true});
+//User.sync({force: true});
 
 app.use(bodyParser.json());
 
