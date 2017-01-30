@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var Sequelize = require('sequelize');
 
-var sequelize = new Sequelize('workout', 'postgres', 'H438#sk!fDf033R', {
+var sequelize = new Sequelize('workoutlog', 'postgres', 'H438#sk!fDf033R', {
 	host: 'localhost',
 	dialect: 'postgres'
 });
@@ -61,8 +61,6 @@ app.use('/api/test', function(req, res){
 app.listen(3000,function(){						
 	console.log("app is listening on 3000");	
 });
-
-
 
 
 
