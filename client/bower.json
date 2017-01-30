@@ -1,5 +1,5 @@
 {
-  "name": "client",  //the bower is a json package that manages the dependencies
+  "name": "client",  
   "description": "",
   "main": "index.js",
   "license": "ISC",
@@ -11,7 +11,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {  //the dependencies are listes here
+  "dependencies": {  
     "jquery": "^3.1.1",
     "bootstrap": "^3.3.7"
   }
