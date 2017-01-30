@@ -2,10 +2,10 @@
  "name": "workoutlogserver",
  "version": "1.0.0",
  "description": "server for workout log app",
- "main": "app.js",
+ "main": "app.js",												//directs client to app.js
  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "start": "node ./node_modules/http-server/bin/http-server"
+     "start": "node ./node_modules/http-server/bin/http-server"  //this directs the script to start node
  },
  "author": "Joshua B",  
  "license": "MIT",
