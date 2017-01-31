@@ -21,10 +21,11 @@ $(function(){
 			API_BASE: API_BASE,
 			setAuthHeader: setAuthHeader
 		};
+
 	})(jQuery);
 
 	//Ensure .disabled aren't clickable
-	$("nav-tabs a[data-toggle=tab]").on("click", function(e){  //is it really equal tabs?
+	$("nav-tabs a[data-toggle=tab]").on("click", function(e){
 		var token = window.localStorage.getItem("sessionToken");
 		if($(this).hasClass("disabled") && !token) {
 			e.preventDefault();
@@ -65,5 +66,4 @@ $(function(){
 	window.WorkoutLog = WorkoutLog;
 
 });
-
 
