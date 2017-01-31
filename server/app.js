@@ -5,9 +5,6 @@ var sequelize = require('./db.js');
 
 var User = sequelize.import('./models/user');
 
-
-
-
 User.sync();  
 //User.sync({force: true});
 
