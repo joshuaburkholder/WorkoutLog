@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var sequelize = require('./db');
+var sequelize = require('./db.js');
 
 var User = sequelize.import('./models/user');
 
@@ -12,6 +12,16 @@ User.sync();
 //User.sync({force: true});
 
 app.use(bodyParser.json());
+
+app.use(require('./middleware/headers'));
+
+app.use('/api/test', function(req, res){
+	res.send("hello World");
+});
+
+app.listen(3000,function(){						
+	console.log("app is listening on 3000");	
+});
 
 app.post('/api/user', function(req,res){
 	var username = req.body.user.username;
@@ -33,16 +43,9 @@ app.post('/api/user', function(req,res){
 });
 
 
-app.use(require('./middleware/headers'));
-
-app.use('/api/test', function(req, res){
-	res.send("hello World");
-});
 
 
-app.listen(3000,function(){						
-	console.log("app is listening on 3000");	
-});
+
 
 
 
