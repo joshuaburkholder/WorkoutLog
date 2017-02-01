@@ -1,22 +1,25 @@
+
 $(function() {
    $.extend( WorkoutLog, {
       signup: function() {
             var username = $("#su_username").val();
             var password = $("#su_password").val();
-            var user = {user:  {username: username, password: password }};
+            var user = {user: { username: username, password: password }};
             var signup = $.ajax({
                type: "POST", 
                url: WorkoutLog.API_BASE + "user", 
-               data: JSON.stringify(user), 
+               data: JSON.stringify( user ), 
                contentType: "application/json"
             });
-            signup.done(function(data) {
-               if(data.sessionToken) {
+            
+            signup
+            .done(function(data) {
+               if (data.sessionToken) {
                   WorkoutLog.setAuthHeader(data.sessionToken);
                   console.log("You made it!");
-                  console.log(data.sessionToken);
-                  
+                  console.log(data.sessionToken);                  
                }
+
                $("#signup-modal").modal("hide");
                $(".disabled").removeClass("disabled");
              //  $("#loginout").text("Logout");
@@ -33,24 +36,32 @@ $(function() {
       login: function() {
    		var username = $("#li_username").val();
    		var password = $("#li_password").val();
-   		var user = {user:  {username: username, password: password }};
-   		var login = $.ajax({
+   		var user = {user: {
+               username: username, 
+               password: password 
+            }
+         };
+   		
+         var login = $.ajax({
    			type: "POST", 
    			url: WorkoutLog.API_BASE + "login", 
-   			data: JSON.stringify(user), 
+   			data: JSON.stringify( user ), 
    			contentType: "application/json"
    		});
+
    		login.done(function(data) {
    			if(data.sessionToken) {
-               WorkoutLog.setAuthHeader(data.sessionToken);
-               
+               WorkoutLog.setAuthHeader(data.sessionToken);   
    			}
+
    			// TODO: add logic to set user and auth token	
    			$("#login-modal").modal("hide");
    			$(".disabled").removeClass("disabled");
+
+
+
    			$("#loginout").text("Logout");
-   		});
-   		login.fail(function() {
+   		}).fail(function() {
    			$("#li_error").text("There was an issue with your username or password").show();
       	});
       },
@@ -69,7 +80,7 @@ $(function() {
   	$("#login").on("click", WorkoutLog.login);
  	$("#loginout").on("click", WorkoutLog.loginout);
 
-   if (window.localStorage.getItem("sessionToken")) {
+   if(window.localStorage.getItem("sessionToken")) {
       $("#loginout").text("Logout");
    }
 
