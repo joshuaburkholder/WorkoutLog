@@ -32,16 +32,18 @@ $(function(){
 				$("#signup-modal").modal("hide");
 				$(".disabled").removeClass("disabled");
 				$("#loginout").text("Logout");
+				
 				}).fail(function(){
 				$("#su_error").text("There was an issue with your sign up").show();
 				});
 
 			}
-		})
+		});
 
 		//login method
 
 		//loginout method
+
 
 	//bind events
 	$("#signup").on("click", WorkoutLog.signup);
