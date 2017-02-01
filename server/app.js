@@ -3,12 +3,12 @@ require('dotenv').config();
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var sequelize = require('sequelize');
 var sequelize = require('./db');
 
 var User = sequelize.import('./models/user');
-sequelize.sync();  
-//User.sync({force: true});
+//sequelize.sync();  
+
+User.sync();
 
 app.use(bodyParser.json());
 
