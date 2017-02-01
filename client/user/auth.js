@@ -36,7 +36,8 @@ $(function() {
       login: function() {
    		var username = $("#li_username").val();
    		var password = $("#li_password").val();
-   		var user = {user: {
+   		var user = {
+            user: {
                username: username, 
                password: password 
             }
@@ -57,10 +58,8 @@ $(function() {
    			// TODO: add logic to set user and auth token	
    			$("#login-modal").modal("hide");
    			$(".disabled").removeClass("disabled");
-
-
-
    			$("#loginout").text("Logout");
+
    		}).fail(function() {
    			$("#li_error").text("There was an issue with your username or password").show();
       	});
