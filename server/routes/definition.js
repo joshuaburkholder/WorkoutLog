@@ -28,7 +28,7 @@ var owner = req.user.id;
 			  }
 
 
-				);
+		);
 });
 
 router.get('/', function(req,res){
