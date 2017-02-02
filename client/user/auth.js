@@ -25,6 +25,8 @@ $(function(){
 			signup.done(function(data){
 				if(data.sessionToken){
 					WorkoutLog.setAuthHeader(data.sessionToken);
+					console.log("You made it!")
+					console.log(data.sessionToken)
 				}
 
 				$("#signup-modal").modal("hide");
@@ -33,9 +35,7 @@ $(function(){
 				}).fail(function(){
 				$("#su_error").text("There was an issue with your sign up").show();
 				});
-
-			})
-		}
+			}
 
 		//login method
 
