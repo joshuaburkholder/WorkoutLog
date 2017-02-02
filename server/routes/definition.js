@@ -16,6 +16,7 @@ var owner = req.user.id;
 			logType: logType,
 			owner: owner
 		})
+	
 		.then(
 			function createSuccess(definition){
 				//send a response as json
@@ -42,10 +43,10 @@ router.get('/', function(req,res){
 
 	.then(
 			//success
-			function findAllSuccess(data){
-				//console.log(data);
-				res.json(data);
-			},
+		function findAllSuccess(data){
+			//console.log(data);
+			res.json(data);
+		},
 			//error
 			function findAllError(err){
 				res.send(500,err.message);
