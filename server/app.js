@@ -8,7 +8,7 @@ var sequelize = require('./db');
 var User = sequelize.import('./models/user');
 //sequelize.sync();  
 
-User.sync();
+sequelize.sync();
 
 app.use(bodyParser.json());
 
