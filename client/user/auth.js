@@ -12,8 +12,7 @@ $(function() {
                contentType: "application/json"
             });
             
-            signup
-            .done(function(data) {
+            signup.done(function(data) {
                if (data.sessionToken) {
                   WorkoutLog.setAuthHeader(data.sessionToken);
                   console.log("You made it!");
