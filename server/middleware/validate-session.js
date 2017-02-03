@@ -1,5 +1,5 @@
 var jwt = require('jsonwebtoken');
-var sequelize = require('../db.js');
+var sequelize = require('../db');
 var User = sequelize.import('../models/user');
 
 module.exports = function(req, res, next) {
@@ -25,4 +25,3 @@ module.exports = function(req, res, next) {
 		next();
 	}
 }
-
