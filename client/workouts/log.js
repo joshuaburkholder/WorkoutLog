@@ -13,6 +13,7 @@ $(function(){
 				$("#log-definition").children().remove();
 				$("log-definition").append(opts);
 			},
+
 			setHistory: function() {
 				var history = WorkoutLog.log.workouts;
 				var len = history.length;
@@ -60,7 +61,7 @@ $(function(){
 			}
 		}
 	});
-	$("log-save").on("click", WorkoutLog.log.create);
+	$("#log-save").on("click", WorkoutLog.log.create);
 
 	if (window.localStorage.getItem("sessionToken")){
 		WorkoutLog.log.fetchAll();

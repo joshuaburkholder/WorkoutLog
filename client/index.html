@@ -16,28 +16,27 @@
 
 <ul class="nav nav-tabs">
 	<li><a href="#home" id="loginout" class="disabled" data-toggle="tab">Login</a></li>
-	<li class="active"><a href="#home" data-toggle="tab">HOME</a></li>
-	<li class="active"><a href="#define" data-toggle="tab">Define</a></li>
-	<li class="active"><a href="#log" data-toggle="tab">Log</a></li>
-	<li class="active"><a href="#history" data-toggle="tab">History</a></li>
+	<li><a href="#home" data-toggle="tab">HOME</a></li>
+	<li><a href="#define" class="disabled" data-toggle="tab">Define</a></li>
+	<li><a href="#log" class="disabled" data-toggle="tab">Log</a></li>
+	<li><a href="#history" class="disabled" data-toggle="tab">History</a></li>
 	<li><a href="#" id="testAPI">Test API</a></li>
 </ul>
 
 <div class="container">
-
+  <div class="tab-content">
     <div class="tab-pane active" id="home">
     	<h2>Hello Workout Log!</h2>
     	<div id="forLogin">
     	  <button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
-    	  <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
-    	</div>
+    	  <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button></div>
     	<div id="forLogout" style="display: none;">
     	  <button class="btn btn-primary">Logout</button>
-    </div>
-  <div class="tab-content">
+    	</div></div>
+ 
 
 <!--DEFINITION-->
-	<div class="tab-pane" id="define"></div>
+	<div class="tab-pane" id="define">
 	  <h2>Define</h2>
 	    <label for="def-description">Description</label>
 	    <textarea class="form-control" id="def-description" rows="3" ></textarea>
@@ -61,22 +60,20 @@
 		<textarea class="form-control" id="log-description" rows="3"></textarea>
 		<button id="log-save" class="btn btn-primary">Save</button>
 	</div>
+
 	<div class="tab-pane" id="history">
 		<h2>History</h2>
-		<ul class-"list-group" id="history-list">
+		<ul class="list-group" id="history-list">
 		</ul>
 	</div>
-</div>
-    	</div>
 
-  </div>
 </div>
 
 <div class="modal fade" id="login-modal" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title">Login</h4>
 			</div>
 			<div class="modal-body">
@@ -103,7 +100,7 @@
 				<h4 class="modal-title">Sign Up</h4>
 			</div>
 			<div class="modal-body">
-				<div class="alert alert-danger" style="display:none;" role="alert" id="su_error"></div>
+				<div class="alert alert-danger" role="alert" style="display:none;" id="su_error"></div>
 					<label for="su_username">Username:</label>
 					<input id="su_username" />
 					<label for="su_username">Password:</label>
@@ -130,7 +127,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="./app.js"></script>
+<script src="./app.js"></script>
 <script src="./user/auth.js"></script>
 <script src="./workouts/define.js"></script>
 <script src="./workouts/log.js"></script>

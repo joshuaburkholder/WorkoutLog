@@ -8,7 +8,7 @@ $(function() {
             var signup = $.ajax({
                type: "POST", 
                url: WorkoutLog.API_BASE + "user", 
-               data: JSON.stringify( user ), 
+               data: JSON.stringify(user), 
                contentType: "application/json"
             });
             
@@ -22,9 +22,9 @@ $(function() {
 
                $("#signup-modal").modal("hide");
                $(".disabled").removeClass("disabled");
-             //  $("#loginout").text("Logout");
+               $("#loginout").text("Logout");
                // go to define tab
-               //$('.nav-tabs a[href="#define"]').tab('show');
+               $('.nav-tabs a[href="#define"]').tab('show');
             })
             .fail(function() {
                $("#su_error").text("There was an issue with your username").show();
@@ -78,8 +78,8 @@ $(function() {
    });
 
    // bind events
-   $("#signup").on("click", WorkoutLog.signup);
   	$("#login").on("click", WorkoutLog.login);
+   $("#signup").on("click", WorkoutLog.signup);
  	$("#loginout").on("click", WorkoutLog.loginout);
 
    if(window.localStorage.getItem("sessionToken")) {

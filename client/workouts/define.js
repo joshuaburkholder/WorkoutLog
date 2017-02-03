@@ -21,17 +21,16 @@ $(function(){
 
 			WorkoutLog.definition.userDefinitions.push(data.definition);
 				});
-
 			},
 
 			fetchAll: function(){
-							var fetchDefs = $.ajax({
-						type: "GET",
-						url: WorkoutLog.API_BASE + "definition",
-						headers: {
-							"authorization": window.localStorage.getItem("sessionToken")
-						}
-					})
+				var fetchDefs = $.ajax({
+					type: "GET",
+					url: WorkoutLog.API_BASE + "definition",
+					headers: {
+						"authorization": window.localStorage.getItem("sessionToken")
+					  }
+				   })
 					.done(function(data) {
 						WorkoutLog.definition.userDefinitions = data;
 					})
