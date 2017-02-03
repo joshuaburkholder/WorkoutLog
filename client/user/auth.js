@@ -24,7 +24,7 @@ $(function() {
                $(".disabled").removeClass("disabled");
                $("#loginout").text("Logout");
                $("#su_username").val();
-               $("su_password").val();
+               $("#su_password").val();
                // go to define tab
                // $('.nav-tabs a[href="#define"]').tab('show');
                //routing
@@ -82,7 +82,7 @@ $(function() {
             window.localStorage.removeItem("sessionToken");
             $("#loginout").text("Login");
          }
-      }
+      },
    });
 
    // bind events
