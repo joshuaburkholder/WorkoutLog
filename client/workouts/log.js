@@ -8,10 +8,10 @@ $(function(){
 				var len = defs.length;
 				var opts;
 				for (var i = 0; i < len; i++){
-					opts += "<option value='" + defs[i].id+"'>" + def[i].description + "</option>";
+					opts += "<option value='" + defs[i].id+"'>" + defs[i].description + "</option>";
 				}
 				$("#log-definition").children().remove();
-				$("log-definition").append(opts);
+				$("#log-definition").append(opts);
 			},
 
 			setHistory: function() {
@@ -41,6 +41,9 @@ $(function(){
 
 				logger.done(function(data){
 					WorkoutLog.log.workouts.push(data);
+					$("#log-description").val("");
+					$("#log-result").val("");
+					$('a[href="#history"]').tab("show");
 				});
 			},
 			fetchAll: function() {
