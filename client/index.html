@@ -15,19 +15,24 @@
 <body>
 
 <ul class="nav nav-tabs">
-	<li><a href="#home" id="loginout" class="disabled" data-toggle="tab">Login</a></li>
+	<li><a href="#login" id="loginout" class="disabled" data-toggle="tab">Login</a></li>
 	<li><a href="#home" data-toggle="tab">HOME</a></li>
-	<li><a href="#define" class="disabled" data-toggle="tab">Define</a></li>
-	<li><a href="#log" class="disabled" data-toggle="tab">Log</a></li>
+
+	<li><a href="#log" class="disabled" data-toggle="tab">Add New Entry</a></li>
 	<li><a href="#history" class="disabled" data-toggle="tab">History</a></li>
 	<li><a href="#goal" data-toggle="tab">Goal</a></li>
+
+	<li><a href="#define" class="disabled" data-toggle="tab">Define</a></li>
+
 	<a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
 </ul>
 
 <div class="container">
   <div class="tab-content">
-    <div class="tab-pane active" id="home">
-    	<h2>Hello writers!</h2>
+
+<!--LOG IN-->
+    <div class="tab-pane active" id="login">
+    	<h2 id="intro">Hello writers!</h2>
     	<div id="forLogin">
     	  <button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
     	  <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button></div>
@@ -35,6 +40,12 @@
     	  <button class="btn btn-primary">Logout</button>
     	</div></div>
  
+
+<!--HOME-->
+	<div class="tab-pane fade" id="home">
+	  <h2>Writing Project</h2>
+	  <p>Information here</p>
+	</div>
 
 <!--DEFINITION-->
 	<div class="tab-pane fade" id="define">

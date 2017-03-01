@@ -28,7 +28,7 @@ $(function() {
                // go to define tab
                // $('.nav-tabs a[href="#define"]').tab('show');
                //routing
-               $('a[href="#define"]').tab("show");
+               $('a[href="#home"]').tab("show");
             })
             .fail(function() {
                $("#su_error").text("There was an issue with your username").show();
@@ -69,7 +69,7 @@ $(function() {
 
             $("#li_username").val("");
             $("li_password").val("");
-            $('a[href="#define"]').tab("show");    
+            $('a[href="#home"]').tab("show");    
 
    		}).fail(function() {
    			$("#li_error").text("There was an issue with your username or password").show();
