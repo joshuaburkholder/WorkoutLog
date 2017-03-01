@@ -58,8 +58,12 @@
 		<label>Select Project:</label>
 		<select class="form-control" id="log-definition"></select>
 		<label>Start writing!</label>
-		<textarea class="form-control" id="log-description" rows="3"></textarea>
+
+		<textarea class="form-control" name="txtScript" id="word_count" rows="4"></textarea>
+			Total Word Count: <span id="log-wordCount">0</span> words.
 		<button id="log-save" class="btn btn-primary">Save</button>
+		<p>You have <span id="word_left">0</span> to meet daily goal.</p>
+
 	</div>
 
 <!--Updating a workout section-->
@@ -77,7 +81,7 @@
 
 
 	<div class="tab-pane fade" id="history">
-		<h2>History</h2>
+		<h2>Writings</h2>
 		<ul class="list-group" id="history-list">
 		</ul>
 	</div>
@@ -156,6 +160,7 @@
 <script src="./workouts/define.js"></script>
 <script src="./workouts/log.js"></script>
 <script src="./workouts/goals.js"></script>
+<script src="./workouts/wordcount.js"></script>
 
 </body>
 </html>

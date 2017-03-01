@@ -10,6 +10,7 @@ router.post('/', function(req, res) {
     var result = req.body.log.result;
     var user = req.user;
     var definition = req.body.log.def;
+    var words = req.body.log.words;
 
     // Use our sequelize model to create log
   	Log 
@@ -17,7 +18,8 @@ router.post('/', function(req, res) {
 	    	description: description,
 	    	result: result,
 	    	owner: user.id,
-	    	def: definition
+	    	def: definition,
+	    	words: words
 	    })
 	    .then(
 	    	function createSuccess(log) {
@@ -69,13 +71,16 @@ router.put('/', function(req,res) {
 	var result = req.body.log.result;
 	var data = req.body.log.id;
 	var definition = req.body.log.def;
+	var words = req.body.log.words;
+
 	console.log(req);
 	Log
 	.update(
 	{
 			description: description,
 			result: result,
-			def: definition
+			def: definition,
+			words: words
 	},
 	{where: {id: data}}
 	).then(
