@@ -58,7 +58,7 @@ $(function(){
 					$("#log-description").val("");
 					$("#log-result").val("");
 					$('a[href="#history"]').tab("show");
-					$("#log-wordCount").val("");
+					$("#log-wordCount").html("");
 				});
 			},
 

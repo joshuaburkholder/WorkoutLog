@@ -1,18 +1,29 @@
-$(function(){
-	$.extend(WorkoutLog, {
-		goal: {
-			goals: [],
+function findTotal(){
+    var progress = document.getElementById("#log-wordCount");
+    var totalProgress=0;
+    for(var i=0;i<progress.length;i++){
+        if(parseInt(progress[i].value))
+            tot += parseInt(progress[i].value);
+    }
+    return $("#totalProgress").text(totalProgress);
+}
 
-			setDefinitions: function() {
-				var def = WorkoutLog.definition.userDefinitions;
-				var len = defs.length;
-				var opts;
-				for (var i = 0; i < len; i++) {
-					opts += "<option value='" + defs[i].id +"'>" + defs[i].description + "</option>";
-				}
-				$("#goal-definition").children().remove();
-				$("#goal-definition").append(opts);
-			},
+
+// $(function(){
+// 	$.extend(WorkoutLog, {
+// 		goal: {
+// 			goals: [],
+
+// 			setDefinitions: function() {
+// 				var def = WorkoutLog.definition.userDefinitions;
+// 				var len = defs.length;
+// 				var opts;
+// 				for (var i = 0; i < len; i++) {
+// 					opts += "<option value='" + defs[i].id +"'>" + defs[i].description + "</option>";
+// 				}
+// 				$("#goal-definition").children().remove();
+// 				$("#goal-definition").append(opts);
+// 			},
 			// setHistory: function() {
 			// 	var history = WorkoutLog.log.workouts;
 			// 	var len = history.length;
@@ -32,26 +43,26 @@ $(function(){
 			// 	$("#history-list").children().remove();
 			// 	$("#history-list").append(lis);
 			// },
-			create: function() {
-				var itsGoal = {
-					title: $("#goal-title").val(),
-					desc: $("#goal-result").val(),
-					// def: $("#goal-definition option:selected").text()
-				};
-				var postData = { goal: itsGoal};
-				var goaler = $.ajax({
-					type: "POST",
-					url: WorkoutLog.API_BASE + "goal",
-					data: JSON.stringify(postData),
-					contentType: "application/json"
-				});
-				goaler.done(function(data){
-					WorkoutLog.log.workouts.push(data);
-					$("#goal-title").val("");
-					$("#goal-description").val("");
-					// $("a[href='#history']").tab("show");
-				});
-			},
+			// create: function() {
+			// 	var itsGoal = {
+			// 		title: $("#goal-title").val(),
+			// 		desc: $("#goal-result").val(),
+			// 		// def: $("#goal-definition option:selected").text()
+			// 	};
+			// 	var postData = { goal: itsGoal};
+			// 	var goaler = $.ajax({
+			// 		type: "POST",
+			// 		url: WorkoutLog.API_BASE + "goal",
+			// 		data: JSON.stringify(postData),
+			// 		contentType: "application/json"
+			// 	});
+			// 	goaler.done(function(data){
+			// 		WorkoutLog.log.workouts.push(data);
+			// 		$("#goal-title").val("");
+			// 		$("#goal-description").val("");
+			// 		// $("a[href='#history']").tab("show");
+			// 	});
+			// },
 
 			// getWorkout: function() {
 			// 	var thisGoal = {id: $(this).attr("id")};
@@ -133,30 +144,30 @@ $(function(){
 			// 		console.log("nope you did not delete it");
 			// 	});
 			// },
-			fetchAll: function() {
-				var fetchDefs = $.ajax({
-					type: "GET",
-					url: WorkoutLog.API_BASE + "goal",
-					headers: {
-						"authorization":
-						window.localStorage.getItem("sessionToken")
-					}
-				})
-				.done(function(data){
-					WorkoutLog.log.workouts = data;
-				})
-				.fail(function(err){
-					console.log(err);
-				});
-			}
-		}
-	});
-	$("#goal-save").on("click", WorkoutLog.log.create);
+	// 		fetchAll: function() {
+	// 			var fetchDefs = $.ajax({
+	// 				type: "GET",
+	// 				url: WorkoutLog.API_BASE + "goal",
+	// 				headers: {
+	// 					"authorization":
+	// 					window.localStorage.getItem("sessionToken")
+	// 				}
+	// 			})
+	// 			.done(function(data){
+	// 				WorkoutLog.log.workouts = data;
+	// 			})
+	// 			.fail(function(err){
+	// 				console.log(err);
+	// 			});
+	// 		}
+	// 	}
+	// });
+	// $("#goal-save").on("click", WorkoutLog.log.create);
 	// $("#history-list").delegate('.remove', 'click', WorkoutLog.log.delete);
 	// $("#goal-update").on("click", WorkoutLog.log.updateWorkout);
 	// $("#history-list").delegate('.update', 'click', WorkoutLog.log.getWorkout);
 
-	if (window.localStorage.getItem("sessionToken")){
-		WorkoutLog.log.fetchAll();
-	}
-});
+// 	if (window.localStorage.getItem("sessionToken")){
+// 		WorkoutLog.log.fetchAll();
+// 	}
+// });
