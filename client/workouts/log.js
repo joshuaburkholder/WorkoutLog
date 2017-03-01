@@ -89,7 +89,7 @@ $(function(){
 						desc: $("#update-description").val(),
 						result: $("#update-result").val(),
 						def: $("#update-definition option:selected").text(),
-						words: $("#update-wordCount").val()
+						words: $("#update-wordCount").html()
 					};
 					for(var i = 0; i < WorkoutLog.log.workouts.length; i++){
 						if(WorkoutLog.log.workouts[i].id == updateLog.id){
@@ -109,7 +109,7 @@ $(function(){
 						$("#update-description").val("");
 						$("#update-result").val();
 						$('a[href="#history"]').tab("show");
-						$("#update-wordCount").val();
+						$("#update-wordCount").html();
 					});
 			},
 

@@ -3,7 +3,7 @@
 //     var totalProgress=0;
 //     for(var i=0;i<progress.length;i++){
 //         if(parseInt(progress[i].value))
-//             tot += parseInt(progress[i].value);
+//             totalProgress += parseInt(progress[i].value);
 //     }
 //     return $("#totalProgress").text(totalProgress);
 // }
@@ -22,6 +22,10 @@ function findProgress(){
 // 	$.extend(WorkoutLog, {
 // 		goal: {
 // 			goals: [],
+
+
+
+
 
 // 			setDefinitions: function() {
 // 				var def = WorkoutLog.definition.userDefinitions;

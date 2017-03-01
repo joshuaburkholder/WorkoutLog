@@ -19,10 +19,12 @@
 	<li><a href="#home" data-toggle="tab">HOME</a></li>
 
 	<li><a href="#log" class="disabled" data-toggle="tab">Add New Entry</a></li>
-	<li><a href="#history" class="disabled" data-toggle="tab">History</a></li>
-	<li><a href="#goal" data-toggle="tab">Goal</a></li>
+	<li><a href="#history" class="disabled" data-toggle="tab">Record of Entries</a></li>
 
-	<li><a href="#define" class="disabled" data-toggle="tab">Define</a></li>
+<!--**************************************GOAL TAB**************************************-->
+<!-- 	<li><a href="#goal" data-toggle="tab">Goal</a></li> -->
+
+	<li><a href="#define" class="disabled" data-toggle="tab">Start a New Project</a></li>
 
 	<a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
 </ul>
@@ -32,7 +34,7 @@
 
 <!--LOG IN-->
     <div class="tab-pane active" id="login">
-    	<h2 id="intro">Hello writers!</h2>
+    	<h2 id=>Hello writers!</h2>
     	<div id="forLogin">
     	  <button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
     	  <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button></div>
@@ -45,6 +47,7 @@
 	<div class="tab-pane fade" id="home">
 	  <h2>Writing Project</h2>
 	  <p>Information here</p>
+	  	  <p>Get started . . . </p>
 	</div>
 
 <!--DEFINITION-->
@@ -61,12 +64,13 @@
 	    <button id="def-save" class="btn btn-primary">Save</button>
 	</div>
 
-<!--Log-->
+<!--CREATE NEW ENTRY-->
 	<div class="tab-pane fade" id="log">
 		<h2>Daily Entry</h2>
 		<label>Title</label>
 		<input type="text" class="form-control" id="log-result" />
 		<label>Select Project:</label>
+
 		<select class="form-control" id="log-definition"></select>
 
 		<label>Start writing!</label>
@@ -74,7 +78,7 @@
 
 		<label>Total Word Count:
 		<span id="log-wordCount">0 a</span>
-<!-- 		<input type="number" class="form-control" id="log-wordCount"></input>
+<!-- 		<input type="number" class="form-control" id="log-wordCount"></input>dafm
  -->
 		</label>
 
@@ -86,7 +90,7 @@
 
 	</div>
 
-<!--Updating a workout section-->
+<!--***********************************UPDATING ENTRIES***********************************-->
 	<div class="tab-pane fade" id="update-log">
 		<h2>Update Entry</h2>
 		<label>Title</label>
@@ -94,25 +98,36 @@
 		<input type="text" class="form-control" id="update-result" />
 		<label>Select Project:</label>
 		<select class="form-control" id="update-definition"></select>
-		<label>Entry:</label>
-		<textarea class="form-control" id="update-description" rows="3"></textarea>
+		<label>Update Entry:</label>
+		<textarea class="form-control" id="word_recount" rows="12"></textarea>
+
+		<label>Total Word Count:
+		<span id="update-wordCount">0 a</span>
+
 		<button id="log-update" class="btn btn-primary">Save</button>
+
+
+
 	</div>
 
-
+<!--****************************** History **************************-->
 	<div class="tab-pane fade" id="history">
 		<h2>Writings</h2>
 		<ul class="list-group" id="history-list">
 		</ul>
+<br>
+	<h1>Great Job!</h1>
+	<p>Ready to write some more?</p>
+	<button data-toggle="modal" data-target="#log" class="btn btn-primary">New Entry</button>
 	</div>
 
+<!--****************************** GOAL **************************-->
 	<div class="tab-pane fade" id="goal">
                 <h2>Goal</h2>
                 <label>Goal Title</label>
                 <input type="text" id="goal title" class="form-control" />
                 <label>Goal</label>
                 <textarea class="form-control" id="update-goal" rows="3"></textarea>
-                <span id="totalProgress">0</span>
                 <button id="goal-button" class="btn btn-primary">Save</button>
      </div>
 
