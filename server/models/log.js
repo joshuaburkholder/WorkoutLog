@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes){
 		result: DataTypes.STRING,
 		owner: DataTypes.INTEGER,
 		def: DataTypes.STRING,
-		words: DataTypes.STRING
+		words: DataTypes.INTEGER
 	},{
 
 	});

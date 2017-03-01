@@ -26,7 +26,7 @@ $(function(){
 					// history[i].def + 
 					history[i].def + " - " + 
 					history[i].result + " " + 
-					history[i].words + " "
+					history[i].words + "*" +
 					//pass the log.id into the button's id attribute
 					"<div class='pull-right'>" +
 						"<button id='" + history[i].id + "' class='update'><strong>U</strong></button>" +
@@ -43,7 +43,7 @@ $(function(){
 					desc: $("#log-description").val(),
 					result: $("#log-result").val(),
 					def: $("#log-definition option:selected").text(),
-					words: $("#log-wordCount").val()
+					words: $("#log-wordCount").html()
 				};
 				var postData = { log: itsLog };
 				var logger = $.ajax({
@@ -89,7 +89,7 @@ $(function(){
 						desc: $("#update-description").val(),
 						result: $("#update-result").val(),
 						def: $("#update-definition option:selected").text(),
-						wc: $("#update-wordCount").val()
+						words: $("#update-wordCount").val()
 					};
 					for(var i = 0; i < WorkoutLog.log.workouts.length; i++){
 						if(WorkoutLog.log.workouts[i].id == updateLog.id){
