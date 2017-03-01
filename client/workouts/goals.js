@@ -1,11 +1,20 @@
-function findTotal(){
-    var progress = document.getElementById("#log-wordCount");
-    var totalProgress=0;
-    for(var i=0;i<progress.length;i++){
-        if(parseInt(progress[i].value))
-            tot += parseInt(progress[i].value);
-    }
-    return $("#totalProgress").text(totalProgress);
+// function findTotal(){
+//     var progress = document.getElementById("#log-wordCount");
+//     var totalProgress=0;
+//     for(var i=0;i<progress.length;i++){
+//         if(parseInt(progress[i].value))
+//             tot += parseInt(progress[i].value);
+//     }
+//     return $("#totalProgress").text(totalProgress);
+// }
+
+function findProgress(){
+	progress = history[i].words;
+	var totalProgress = 0;
+	for (var i = 0; i < progress.length; i++){
+		totalProgress + progress[i];
+	}
+	return $("#totalProgress").text(totalProgress);
 }
 
 
