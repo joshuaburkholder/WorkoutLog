@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  $("#word_count").on('keyup', function() {
-    var words = this.value.match(/\S+/g).length;
+  $("#update_word_count").on('keyup', function() {
+    var moreWords = this.value.match(/\S+/g).length;
 
     // if (words > 200) {
     //   // Split the string on first 200 words and rejoin on spaces
@@ -9,8 +9,7 @@ $(document).ready(function() {
     //   $(this).val(trimmed + " ");
     // }
     // else {
-      $("#log-wordCount").text(words);
-      $("#update-wordCount").text(words);
+      $("#update-wordCount").text(moreWords);
       $("#word_left").text(1667-words);
     // }
   });

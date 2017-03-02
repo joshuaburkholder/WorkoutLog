@@ -72,7 +72,7 @@ $(function() {
             $('a[href="#home"]').tab("show");    
 
    		}).fail(function() {
-   			$("#li_error").text("There was an issue with your username or password").show();
+   			$("#li_error").text("Please sign in with your username and password").show();
       	});
       },
 

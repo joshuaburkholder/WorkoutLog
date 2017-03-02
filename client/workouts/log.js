@@ -7,7 +7,7 @@ $(function(){
 				var defs = WorkoutLog.definition.userDefinitions;
 				var len = defs.length;
 				var opts;
-				for (var i = 0; i < len; i++){
+				for (var i = 0; i < 3; i++){
 					opts += "<option value='" + defs[i].id+"'>" + defs[i].description + "</option>";
 				}
 				$("#log-definition").children().remove();
@@ -89,7 +89,7 @@ $(function(){
 						desc: $("#update-description").val(),
 						result: $("#update-result").val(),
 						def: $("#update-definition option:selected").text(),
-						words: $("#update-wordCount").html()
+						moreWords: $("#update-wordCount").html()
 					};
 					for(var i = 0; i < WorkoutLog.log.workouts.length; i++){
 						if(WorkoutLog.log.workouts[i].id == updateLog.id){

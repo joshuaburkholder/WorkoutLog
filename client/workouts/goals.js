@@ -8,14 +8,14 @@
 //     return $("#totalProgress").text(totalProgress);
 // }
 
-function findProgress(){
-	progress = history[i].words;
-	var totalProgress = 0;
-	for (var i = 0; i < progress.length; i++){
-		totalProgress + progress[i];
-	}
-	return $("#totalProgress").text(totalProgress);
-}
+// function findProgress(){
+// 	progress = history[i].words;
+// 	var totalProgress = 0;
+// 	for (var i = 0; i < progress.length; i++){
+// 		totalProgress + progress[i];
+// 	}
+// 	return $("#totalProgress").text(totalProgress);
+// }
 
 
 // $(function(){

@@ -8,12 +8,13 @@
 	<title>Workout Log</title>
 
 	<link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
+	<link rel="stylesheet" type="text/css" href="./assets/index.css">
 </head>
 
 
 <body>
 
+<!--**************************************NAV TAB**************************************-->
 <ul class="nav nav-tabs">
 	<li><a href="#login" id="loginout" class="disabled" data-toggle="tab">Login</a></li>
 	<li><a href="#home" data-toggle="tab">HOME</a></li>
@@ -29,10 +30,13 @@
 	<a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
 </ul>
 
+<!--**************************************CONTAINER**************************************-->
 <div class="container">
   <div class="tab-content">
 
-<!--LOG IN-->
+<!--**************************************LOGIN MODAL**************************************-->
+
+
     <div class="tab-pane active" id="login">
     	<h2 id=>Hello writers!</h2>
     	<div id="forLogin">
@@ -43,13 +47,14 @@
     	</div></div>
  
 
-<!--HOME-->
+<!--**************************************HOME MODAL**************************************-->
 	<div class="tab-pane fade" id="home">
 	  <h2>Writing Project</h2>
 	  <p>Information here</p>
 	  	  <p>Get started . . . </p>
 	</div>
 
+<!--**************************************LOGIN MODAL**************************************-->
 <!--DEFINITION-->
 	<div class="tab-pane fade" id="define">
 	  <h2>Create New Project(s)</h2>
@@ -64,28 +69,25 @@
 	    <button id="def-save" class="btn btn-primary">Save</button>
 	</div>
 
-<!--CREATE NEW ENTRY-->
+<!--********************************************************************   CREATE NEW ENTRY  ***-->
 	<div class="tab-pane fade" id="log">
 		<h2>Daily Entry</h2>
+		
 		<label>Title</label>
 		<input type="text" class="form-control" id="log-result" />
+		
 		<label>Select Project:</label>
-
 		<select class="form-control" id="log-definition"></select>
 
 		<label>Start writing!</label>
 		<textarea class="form-control" name="txtScript" id="word_count" rows="15"></textarea>
 
 		<label>Total Word Count:
-		<span id="log-wordCount">0 a</span>
-<!-- 		<input type="number" class="form-control" id="log-wordCount"></input>dafm
- -->
+		  <span id="log-wordCount">0</span>
 		</label>
 
 <br>
 		<button id="log-save" class="btn btn-primary">Save</button>
-
-
 		<p>You have <span id="word_left">0 a</span> to meet daily goal.</p>
 
 	</div>
@@ -99,15 +101,12 @@
 		<label>Select Project:</label>
 		<select class="form-control" id="update-definition"></select>
 		<label>Update Entry:</label>
-		<textarea class="form-control" id="word_recount" rows="12"></textarea>
+		<textarea class="form-control" id="update_word_count" rows="12"></textarea>
 
 		<label>Total Word Count:
 		<span id="update-wordCount">0 a</span>
 
 		<button id="log-update" class="btn btn-primary">Save</button>
-
-
-
 	</div>
 
 <!--****************************** History **************************-->
@@ -118,22 +117,22 @@
 <br>
 	<h1>Great Job!</h1>
 	<p>Ready to write some more?</p>
-	<button data-toggle="modal" data-target="#log" class="btn btn-primary">New Entry</button>
-	</div>
+
 
 <!--****************************** GOAL **************************-->
-	<div class="tab-pane fade" id="goal">
+<!-- 	<div class="tab-pane fade" id="goal">
                 <h2>Goal</h2>
                 <label>Goal Title</label>
                 <input type="text" id="goal title" class="form-control" />
                 <label>Goal</label>
                 <textarea class="form-control" id="update-goal" rows="3"></textarea>
                 <button id="goal-button" class="btn btn-primary">Save</button>
-     </div>
+     </div> -->
 
 	
 
 </div>
+<!--************************************** MODAL**************************************-->
 
 <div class="modal fade" id="login-modal" role="dialog">
 	<div class="modal-dialog">
@@ -143,7 +142,7 @@
 				<h4 class="modal-title">Login</h4>
 			</div>
 			<div class="modal-body">
-				<div class="alert alert-danger" style="display:none;" role="alert" id="li_error"></div>
+				<div class="alert alert-info" style="display:none;" role="alert" id="li_error"></div>
 					<label for="li_username">Username:</label>
 					<input id="li_username" />
 					<label for="li_password">Password:</label>
@@ -157,8 +156,9 @@
 	</div>
 </div>
 
+<!--**************************************SIGN UP**************************************-->
 
-<!--sign up-->
+
 <div class="modal fade" id="signup-modal" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -197,6 +197,8 @@
 <script src="./workouts/log.js"></script>
 <script src="./workouts/goals.js"></script>
 <script src="./workouts/wordcount.js"></script>
+<script src="./workouts/updateWordCount.js"></script>
+
 
 </body>
 </html>

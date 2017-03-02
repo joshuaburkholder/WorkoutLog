@@ -1,0 +1,10 @@
+
+body {
+	background-color: black !import;
+	width: 500px;
+	margin: 10px 0px 10px 50px; 
+}
+
+body.modal-open div.modal-backdrop { 
+    z-index: 1050 !import; 
+}
