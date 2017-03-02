@@ -8,3 +8,7 @@ body {
 body.modal-open div.modal-backdrop { 
     z-index: 1050 !import; 
 }
+
+list-group-item {
+	
+}

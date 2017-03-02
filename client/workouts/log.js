@@ -4,10 +4,10 @@ $(function(){
 			workouts: [],
 
 			setDefinitions: function() {
-				var defs = WorkoutLog.definition.userDefinitions;
+				var defs = "The next great American novel";
 				var len = defs.length;
 				var opts;
-				for (var i = 0; i < 3; i++){
+				for (var i = 0; i < i; i++){
 					opts += "<option value='" + defs[i].id+"'>" + defs[i].description + "</option>";
 				}
 				$("#log-definition").children().remove();
@@ -24,8 +24,8 @@ $(function(){
 				for (var i = 0; i < len; i++) {
 					lis += "<li class='list-group-item'>" + 
 					// history[i].def + 
-					history[i].def + " - " + 
-					history[i].result + " " + 
+					history[i].def + "Entry: " + 
+					history[i].result + "\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0" + "Word count: " + 
 					history[i].words + "*" +
 					//pass the log.id into the button's id attribute
 					"<div class='pull-right'>" +
@@ -89,7 +89,7 @@ $(function(){
 						desc: $("#update-description").val(),
 						result: $("#update-result").val(),
 						def: $("#update-definition option:selected").text(),
-						moreWords: $("#update-wordCount").html()
+						words: $("#update-wordCount").html()
 					};
 					for(var i = 0; i < WorkoutLog.log.workouts.length; i++){
 						if(WorkoutLog.log.workouts[i].id == updateLog.id){

@@ -25,7 +25,7 @@
 <!--**************************************GOAL TAB**************************************-->
 <!-- 	<li><a href="#goal" data-toggle="tab">Goal</a></li> -->
 
-	<li><a href="#define" class="disabled" data-toggle="tab">Start a New Project</a></li>
+<!-- 	<li><a href="#define" class="disabled" data-toggle="tab">Start a New Project</a></li> -->
 
 	<a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
 </ul>
@@ -56,18 +56,18 @@
 
 <!--**************************************LOGIN MODAL**************************************-->
 <!--DEFINITION-->
-	<div class="tab-pane fade" id="define">
+<!-- 	<div class="tab-pane fade" id="define">
 	  <h2>Create New Project(s)</h2>
 	    <label for="def-description">Description of Project</label>
 	    <input type="text" class="form-control" id="def-description" />
-<!-- 	    <label for="def-logtype">Log work by</label>
+	    <label for="def-logtype">Log work by</label>
 	    <select class="form-control" id="def-logtype">
 	      <option>Time</option>
 	      <option>Weight</option>
 	      <optgroup>Reps</optgroup>
-	    </select> -->
+	    </select>
 	    <button id="def-save" class="btn btn-primary">Save</button>
-	</div>
+	</div> -->
 
 <!--********************************************************************   CREATE NEW ENTRY  ***-->
 	<div class="tab-pane fade" id="log">
@@ -76,8 +76,8 @@
 		<label>Title</label>
 		<input type="text" class="form-control" id="log-result" />
 		
-		<label>Select Project:</label>
-		<select class="form-control" id="log-definition"></select>
+<!-- 		<label>Select Project:</label>
+		<select class="form-control" id="log-definition"></select> -->
 
 		<label>Start writing!</label>
 		<textarea class="form-control" name="txtScript" id="word_count" rows="15"></textarea>
@@ -88,7 +88,7 @@
 
 <br>
 		<button id="log-save" class="btn btn-primary">Save</button>
-		<p>You have <span id="word_left">0 a</span> to meet daily goal.</p>
+		<p>You have <span id="word_left">0</span> to meet daily goal.</p>
 
 	</div>
 
@@ -98,13 +98,15 @@
 		<label>Title</label>
 		<input type="hidden" class="form-control" id="update-id" />
 		<input type="text" class="form-control" id="update-result" />
-		<label>Select Project:</label>
-		<select class="form-control" id="update-definition"></select>
+
+<!-- 		<label>Select Project:</label>
+		<select class="form-control" id="update-definition"></select> -->
+
 		<label>Update Entry:</label>
 		<textarea class="form-control" id="update_word_count" rows="12"></textarea>
 
 		<label>Total Word Count:
-		<span id="update-wordCount">0 a</span>
+		<p><span id="update-wordCount">0</span></p>
 
 		<button id="log-update" class="btn btn-primary">Save</button>
 	</div>
@@ -114,10 +116,13 @@
 		<h2>Writings</h2>
 		<ul class="list-group" id="history-list">
 		</ul>
+
 <br>
 	<h1>Great Job!</h1>
 	<p>Ready to write some more?</p>
+	<p>Click the "Add New Entry" tab at the top to keep writing!</p>
 
+	</div>
 
 <!--****************************** GOAL **************************-->
 <!-- 	<div class="tab-pane fade" id="goal">
