@@ -39,6 +39,7 @@
 
     <div class="tab-pane active" id="login">
     	<h2 id=>Hello writers!</h2>
+		  <h3>Ready to write the next great American novel?</h3>
     	<div id="forLogin">
     	  <button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
     	  <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button></div>
@@ -49,9 +50,39 @@
 
 <!--**************************************HOME MODAL**************************************-->
 	<div class="tab-pane fade" id="home">
-	  <h2>Writing Project</h2>
-	  <p>Information here</p>
-	  	  <p>Get started . . . </p>
+	  <h2>Start writing with Scratchpad</h2>
+
+	  <h4>Scratchpad helps cut out the distractions and keeps you focused on writing.</h4>
+	  	  <p>To get started, simply click on the "Add an Entry" tab above. There's no need to worry about counting words - we'll take care of that for you. If you get stuck, you can check out some of the link below for a little inspiration.</p>
+<hr>
+		<div class="row">
+  			<div class="col-md-4">
+  				<h4>Not sure where to start?</h4>
+			</div>
+
+  			<div class="col-md-4">
+	  	 		<h4>Need a little more motivation?</h4>
+	  	 	</div>
+
+  			<div class="col-md-4">
+	  	  		<h4>Ready to write a novel?</h4>
+			</div>
+		</div>
+
+		<div class="row">
+  			<div class="col-md-4" id="imgbox">
+  				<a href="http://writetodone.com/31-ways-to-find-inspiration-for-your-writing/"><img src="./assets/create.jpg" class="displayed"> <br>'31 Ways to Find Inspiration for Your Writing'</a></p>
+			</div>
+
+  			<div class="col-md-4" id="imgbox">
+	  	 		<a href="https://www.brainpickings.org/tag/writing/"><img src="./assets/brain_pickings.png" class="displayed"><br>Brainpickings</a></p>
+	  	 	</div>
+
+  			<div class="col-md-4" id="imgbox">
+	  	  		<a href="http://nanowrimo.org/"><img src="./assets/crest.png" class="displayed"><br>National Novel Writing Month</a></p>
+			</div>
+		</div>
+
 	</div>
 
 <!--**************************************LOGIN MODAL**************************************-->
@@ -83,12 +114,12 @@
 		<textarea class="form-control" name="txtScript" id="word_count" rows="15"></textarea>
 
 		<label>Total Word Count:
-		  <span id="log-wordCount">0</span>
+		  <span id="log-wordCount" class="badge badge-default badge-pill">0</span>
 		</label>
 
 <br>
 		<button id="log-save" class="btn btn-primary">Save</button>
-		<p>You have <span id="word_left">0</span> to meet daily goal.</p>
+		<p id="fancy">You have <span id="word_left">0</span> to meet daily goal.</p>
 
 	</div>
 
@@ -119,7 +150,7 @@
 
 <br>
 	<h1>Great Job!</h1>
-	<p>Ready to write some more?</p>
+	<p id="fancy">Ready to write some more?</p>
 	<p>Click the "Add New Entry" tab at the top to keep writing!</p>
 
 	</div>

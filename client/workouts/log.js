@@ -25,8 +25,8 @@ $(function(){
 					lis += "<li class='list-group-item'>" + 
 					// history[i].def + 
 					history[i].def + "Entry: " + 
-					history[i].result + "\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0" + "Word count: " + 
-					history[i].words + "*" +
+					history[i].result + "<br>" + "Word count: " + 
+					history[i].words + 
 					//pass the log.id into the button's id attribute
 					"<div class='pull-right'>" +
 						"<button id='" + history[i].id + "' class='update'><strong>U</strong></button>" +
