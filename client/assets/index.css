@@ -39,19 +39,18 @@ body {
     margin-right: auto 
 }
 
-.nav-tabs {
-
+/*.nav-tabs {
+	border: 3px solid black;
 }
-
+*/
 .navlist {
 	border: 2px solid blue;
 	border-radius: 20px;
 	background-color: white;
-	box-shadow: 30px;
 }
 
 .nav-tabs>li>a:hover {
-	border-radius: 20px;
+/*	border-radius: 20px;*/
 	background-color: lightblue;
 }
 
